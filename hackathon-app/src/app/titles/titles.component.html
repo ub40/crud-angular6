@@ -1,0 +1,32 @@
+
+<div>
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">created</th>
+            <th scope="col">updated</th>
+          </tr>
+        </thead>
+          <tbody>
+          <tr *ngFor="let title of titles">
+            <td scope="row" class="hidden">{{title.id}}</td>
+            <td scope="row">{{title.title}}</td>
+            <td scope="row">{{title.createAt}}</td>
+            <td scope="row">{{title.updateAt}}</td>
+            <td><button class="btn btn-danger" (click)="deleteTitle(title)">delete</button></td>
+          </tr>
+          </tbody>
+        </table>
+</div>
+
+<div class="col-md-6">
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" [(ngModel)]="title.title" placeholder="title naam" name="title" class="form-control" id="title">
+  </div>
+  <button class="btn btn-success" (click)="createTitle()">create</button>
+</form>
+</div>       
