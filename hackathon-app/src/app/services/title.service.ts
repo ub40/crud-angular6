@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
 import { Title } from '../models/title.model';
 
 
@@ -11,20 +10,19 @@ const httpOptions = {
   @Injectable()
   export class TitleService {
 
-    constructor(private http: HttpClient) {}
     private url = 'http://localhost:8080/hackathon-0.0.1-SNAPSHOT/api/title/';
-    // private titleUrl = '/api';
+    constructor(private http: HttpClient) {}
 
-    public getTitles() {
-        return this.http.get<Title[]>(this.url);
-      }
-
-    public deleteTitles(title) {
-        return this.http.delete(this.url + title.id);
+    getTitles() {
+      return this.http.get<Title[]>(this.url);
     }
 
-    public createTitle(title) {
-        return this.http.post<Title>(this.url, {title : title});
+    deleteTitles(title) {
+      return this.http.delete(this.url + title.id);
+    }
+
+    createTitle(title) {
+      return this.http.post<Title>(this.url, {title : title});
     }
 
   }

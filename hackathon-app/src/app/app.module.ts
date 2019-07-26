@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { TitlesComponent } from './titles/titles.component';
 import { TitleService } from './services/title.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitlesComponent,
+    AddUserComponent,
+    UsersListComponent,
   ],
   imports: [
     BrowserModule,
