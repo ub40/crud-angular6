@@ -6,9 +6,19 @@
 </div>
 
 <div class="container">
+
   <div class="row">
       <div class="col-xs-12">
-        
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a routerLink="users" class="btn btn-primary active" role="button" routerLinkActive="active">Users</a>
+                </li>
+                <li class="nav-item" style="margin-left: 10px;">
+                    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+                </li>
+            </ul>
+        </nav>
         <app-titles></app-titles>
         
         <router-outlet></router-outlet>
